@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from register import views as v
+from posts.views import post_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('register/', v.register, name="register"),
+    path('', post_list)
 ]

@@ -1,0 +1,25 @@
+{% extends "posts/post_list.html" %}
+
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class=>
+<div class="container h-100 d-flex justify-content-center">
+    <div class="jumbotron my-auto">
+        <h1>Registracija</h1>
+        <div class="w-100 p-3">
+            <form method="POST" class="form-group">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-success">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+
+
